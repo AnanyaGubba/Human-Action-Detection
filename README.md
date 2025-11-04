@@ -1,81 +1,128 @@
 # Human Action Detection using Motion Sensor Data
 
-# 📌 1. Project Description
+> **This project focuses on building a machine learning pipeline to detect and classify human actions based on time-series motion or sensor data, such as accelerometer or gyroscope readings. Such a system has practical applications in health monitoring, activity recognition, fitness tracking, and gesture-based control systems.**
 
-This project focuses on building a machine learning pipeline to detect and classify human actions based on time-series motion or sensor data, such as accelerometer or gyroscope readings. Such a system has practical applications in health monitoring, activity recognition, fitness tracking, and gesture-based control systems.
+**The notebook walks through preprocessing, feature engineering, model training, and evaluation using popular ML techniques**
 
-The notebook walks through preprocessing, feature engineering, model training, and evaluation using popular ML techniques
+---
 
-# 🛠️ 2. Tech Stack Used
-- Language: Python
+## Table of Contents
 
-- Environment: Google Colab
+- [Overview](#overview)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Data Sources](#data-sources)
+- [Usage](#usage)
+- [Model Details](#model-details)
+- [Results & Evaluation](#results--evaluation)
+- [Requirements](#requirements)
 
-- Libraries:
 
-  - pandas – data manipulation and cleaning
+---
 
-  - numpy – numerical operations
+## Overview
 
-  - scikit-learn – ML models, preprocessing, evaluation
+This repository provides a complete workflow for predicting and analyzing human actions from motion or sensor datasets using machine learning algorithms. The project is implemented entirely in Python Jupyter Notebooks for transparency and reusability.
 
-  - matplotlib / seaborn – data visualization
+---
 
-  - joblib – model serialization 
+## Features
 
-# ✨ 3. Features
-- Data Preprocessing
-Cleans and transforms raw sensor/motion data for analysis and modeling.
+- **End-to-End Pipeline:** Data loading, preprocessing, feature engineering, model training, evaluation, and prediction.
+- **Supervised Learning:** Implements classifiers such as Random Forest, SVM, and more.
+- **Sensor Data Analysis:** Handles motion/sensor CSV datasets, visualizes signals, and explores statistical properties.
+- **Model Performance Evaluation:** Plots confusion matrix, accuracy, precision, recall, and F1-score.
+- **Google Colab Ready:** Easy to run in Colab or Jupyter.
 
-- Model Training
-Implements supervised learning algorithms such as:
+---
 
-  - K-Nearest Neighbors (KNN)
+## Project Structure
 
-  - Support Vector Machines (SVM)
+```
+Human-Action-Detection/
+│
+├── Human_Action_Detection.ipynb   # Main Jupyter Notebook for the entire ML workflow
+├── data/                         # Raw and processed sensor/motion data
+│   └── sensor_data.csv
+├── models/                       # Saved model files (.pkl or .joblib)
+├── images/                       # Plots/figures from analysis
+├── README.md                     # Project documentation
+└── requirements.txt              # Python dependencies
+```
 
-  - Random Forest
+---
 
-  - Logistic Regression (or others as included)
+## Getting Started
 
-- Model Evaluation
-Uses performance metrics such as:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/AnanyaGubba/Human-Action-Detection.git
+   ```
 
-  - Accuracy
+2. **Run on Google Colab or Jupyter:**
+   - Open `Human_Action_Detection.ipynb` in your Colab or local Jupyter environment.
 
-  - Precision, Recall, F1-score
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-  - Confusion Matrix
+4. **Prepare the dataset:**
+   - Place your sensor or motion data file in the `data/` folder and update the notebook path if needed.
 
-- Data Visualization
-Plots class distributions and feature correlations to uncover patterns.
+---
 
-- Prediction System
-The trained model can classify a given input sequence into the correct human action.
+## Data Sources
 
-# ⚙️ 4. How It Works
+- Public datasets (links or references provided in the notebook)
+- Typical data format: CSV files with time series sensor/motion readings and labeled actions
 
-1. Load and Explore the Dataset
-Import motion sensor data and analyze distributions, balance, and structure.
+---
 
-2. Preprocess the Data
+## Usage
 
- - Handle missing values
+- **Notebook:** Run notebook cells in order for data processing, training, and evaluation.
+- **Custom Data:** Replace `sensor_data.csv` with your own motion/sensor data.
+- **Model Saving/Loading:** Code included for saving and reusing trained models.
 
- - Encode categorical labels
+---
 
- - Normalize feature values
+## Model Details
 
-3. Feature Engineering
-Extract meaningful statistical features if working with raw time-series sequences (e.g., mean, std, energy, etc.).
+- **Algorithms:** Random Forest, Support Vector Machine (SVM), Logistic Regression, etc.
+- **Feature Engineering:** Time-domain and frequency-domain features, normalization.
+- **Training:** Train/Test split, cross-validation, hyperparameter tuning.
+- **Evaluation:** Visualization of results, metrics calculation.
 
-4. Model Training
-Train one or more ML classifiers on the processed dataset using a training/testing split.
+---
 
-5. Evaluation
-Predict on the test set and evaluate using various performance metrics.
+## Results & Evaluation
 
-6. Prediction
-Use the trained model to classify new unseen motion sensor data into the correct human action label.
+- Confusion matrix, classification report, accuracy plots
+- Example result summaries and best model selection
+- Key insights noted in the notebook documentation
 
+---
+
+## Requirements
+
+The required Python packages are listed in [`requirements.txt`](requirements.txt).  
+To install them, run:
+
+```bash
+pip install -r requirements.txt
+```
+
+Typical dependencies include:
+```bash
+- numpy
+- pandas
+- scikit-learn
+- matplotlib
+- seaborn
+- joblib
+```
+
+Please see the [`requirements.txt`](requirements.txt) file for the complete list and versions.
 
