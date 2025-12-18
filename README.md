@@ -1,8 +1,8 @@
 # Human Action Detection using Motion Sensor Data
 
-> **This project focuses on building a machine learning pipeline to detect and classify human actions based on time-series motion or sensor data, such as accelerometer or gyroscope readings. Such a system has practical applications in health monitoring, activity recognition, fitness tracking, and gesture-based control systems.**
+**This project focuses on building a machine learning pipeline to detect and classify human actions based on time-series motion or sensor data, such as accelerometer or gyroscope readings. Such a system has practical applications in health monitoring, activity recognition, fitness tracking, and gesture-based control systems.**
 
-**The notebook walks through preprocessing, feature engineering, model training, and evaluation using popular ML techniques**
+**It walks through preprocessing, feature engineering, model training, and evaluation using popular ML techniques**
 
 ---
 
